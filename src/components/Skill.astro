@@ -1,0 +1,17 @@
+---
+const { url, skill } = Astro.props;
+---
+
+<div class="col d-flex align-items-start">
+    <img
+        class="rounded-lg-3"
+        src={url}
+        alt={skill}
+        width=50%
+        height=50%
+    />
+    <div>
+        <h4 class="fw-bold mb-0">{skill}</h4>
+        <p>Paragraph of text beneath the heading to explain the heading.</p>
+    </div>
+</div>

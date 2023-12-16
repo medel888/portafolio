@@ -1,0 +1,162 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Skill from "../components/Skill.astro";
+import img_home from "../../public/images/imagenes-JPEG.jpg";
+import html from "../../public/icons/html5-original.svg";
+import css from "../../public/icons/css3-original.svg";
+import js from "../../public/icons/javascript-original.svg";
+import bootstrap from "../../public/icons/bootstrap-original.svg";
+import java from "../../public/icons/java-original.svg"
+import python from "../../public/icons/python-original.svg";
+import carousel_1 from "../../public/images/carousel/01.jpg";
+import carousel_2 from "../../public/images/carousel/02.jpg";
+import carousel_3 from "../../public/images/carousel/03.jpg";
+import "../styles/global.css"
+---
+
+<Layout title="Welcome to Astro.">
+    <div class="container">
+        <div class="fondo-home">
+            <div class="py-5 d-none d-md-block"></div>
+            <div class="px-3 py-5 text-white">
+                <h1 class="display-1 mt-5">Hello, I'm Marcos Medel</h1>
+                <h1 class="mb-5">and I'm a web developer..</h1>
+                <p class="lead">
+                    <a href="#" class="btn btn-lg btn-secondary fw-bold"
+                        >Learn more</a
+                    >
+                </p>
+            </div>
+            <div class="my-5 py-5 d-none d-md-block"></div>
+        </div>
+        <div
+            class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg bg-color-1"
+        >
+            <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+                <h1 class="display-4 fw-bold lh-1">About me</h1>
+                <p class="lead">
+                    Quickly design and customize responsive mobile-first sites
+                    with Bootstrap, the world’s most popular front-end open
+                    source toolkit, featuring Sass variables and mixins,
+                    responsive grid system, extensive prebuilt components, and
+                    powerful JavaScript plugins.
+                </p>
+            </div>
+            <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
+                <img
+                    class="rounded-lg-3"
+                    src={img_home.src}
+                    alt=""
+                    width="720"
+                />
+            </div>
+        </div>
+        <div class="container px-4 py-5 text-white" id="icon-grid">
+            <h2 class="pb-2 border-bottom">My skills</h2>
+
+            <div
+                class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5"
+            >
+                <Skill url={html.src} skill="HTML" />
+                <Skill url={css.src} skill="CSS" />
+                <Skill url={js.src} skill="Java Script" />
+                <Skill url={bootstrap.src} skill="Boostrap" />
+                <Skill url={java.src} skill="Java" />
+                <Skill url={python.src} skill="Python" />
+            </div>
+        </div>
+    </div>
+
+    <div
+        id="carouselExampleIndicators"
+        class="carousel slide container my-5"
+        data-bs-ride="carousel"
+    >
+        <div class="carousel-indicators">
+            <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"></button>
+            <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src={carousel_1.src} class="d-block w-100" alt="..." />
+            </div>
+            <div class="carousel-item">
+                <img src={carousel_2.src} class="d-block w-100" alt="..." />
+            </div>
+            <div class="carousel-item">
+                <img src={carousel_3.src} class="d-block w-100" alt="..." />
+            </div>
+        </div>
+        <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev"
+        >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next"
+        >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <div class="container-fluid p-5 bg-color-1" id="contact">
+        <div class="row container">
+            <div class="col-5 p-4 rounded bg-color-2 text-white">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label"
+                        >Nombre</label
+                    >
+                    <input
+                        type="email"
+                        class="form-control"
+                        id="exampleFormControlInput1"
+                        placeholder="Tu nombre"
+                    />
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label"
+                        >Correo electrónico</label
+                    >
+                    <input
+                        type="email"
+                        class="form-control"
+                        id="exampleFormControlInput1"
+                        placeholder="Tu correo electrónico"
+                    />
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label"
+                        >Mensaje</label
+                    >
+                    <textarea
+                        class="form-control"
+                        id="exampleFormControlTextarea1"
+                        rows="3"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+</Layout>
